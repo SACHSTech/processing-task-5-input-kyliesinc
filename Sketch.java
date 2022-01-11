@@ -10,6 +10,11 @@ public class Sketch extends PApplet {
   public int cloudY = 100;
   public int cloudW = 25;
   public int cloudH = 10;
+
+  // background colour variables
+  public int r = 23;
+  public int g = 184;
+  public int b = 20;
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
@@ -24,7 +29,7 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(23, 184, 20);
+    background(r, g, b);
   }
 
   /**
@@ -35,18 +40,27 @@ public class Sketch extends PApplet {
     if (keyPressed){
       // change background when key pressed
       if(key == 'r'){
-        background (156, 20, 20);
+        r = 156;
+        g = 20;
+        b = 20;
+        background (r, g, b);
       }
       else if(key == 'g'){
-        background (3, 255, 3);
+        r = 3;
+        g = 255;
+        b = 3;
+        background (r, g, b);
       }
       else if(key == 'b'){
-        background(2, 149, 240);
+        r = 2;
+        g = 149;
+        b = 240;
+        background(r, g, b);
       }      
     } 
     
     // draw cloud
-    stroke(0, 0, 0);
+    stroke(r, g, b);
     fill(255, 255, 255);
     if (keyPressed){
       if (keyCode == UP){
